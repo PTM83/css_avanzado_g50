@@ -14,52 +14,122 @@ margin:0px;
     border: solid 1px black;
     background-color: aqua;
     flex-grow:1;
-    flex-basis:1%;
-}
-
-.users p {
-    font-size:2em;
+    flex-basis:20%;
 }
 
 .person {
     display:flex;
     align-items:center;
+    flex-direction:row;
     justify-content:flex-start;
     border: 1px solid black;
 }
 
-.person > .icon {
-    padding: 0 0 0 30%;
+.text-user {
+    display:flex;
+    flex-direction:column;
 }
 
+.state {
+    font-size:1em;
+    color:grey;
+}
 
+.person .icon {
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    padding:0 0 0 20%;
+}
+
+.users .person p {
+    font-size:1.5em;
+}
+
+.person img {
+    border-radius: 50%;
+    width: 2.5em;
+    margin:10px 10px 10px 20px;
+}
+
+/*ADD PERSON*/
+
+.add-person {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-basis: 100px;
+    border: 1px solid black;
+}
+
+button {
+    background-color:rgb(153, 153, 255);
+    border:1px solid rgb(51, 0, 153);
+    color:white;
+    cursor:pointer;
+    text-align:center;
+    font-size:1.2em;
+    display:inline-block;
+    padding: 10px 32px;
+    border-radius:8px;
+}
+
+/* MESSAGE SECTOR*/
 .message {
     display:flex;
     justify-content:center;
     align-items:center;
+    flex-direction:column;
     border: solid 1px black;
-    background-color: grey;
+    background-color: lightgrey;
     flex-grow:3;
 }
 
+.message img {
+    width:30%;
+}
+
 .message > * {
+    font-size:1.9em;
+    color:black;
 }
 
 /*SCREEN BEHAVIOUR*/
 @media screen and (max-width: 391px) {
     .users{
-        flex-basis:30%;
+        flex-basis:100%;
     }
 
-    .person > .icon {
-        padding-left:40%;
+    .users .person p {
+    font-size:1.0em;
     }
 
-    .users p {
-        font-size:1em;
+    .state {
+        font-size:0.8em;
+        color:grey;
+    }
+
+    .person img {
+        border-radius: 50%;
+        width: 4em;
+        margin:10px 10px 10px 20px;
+    }
+
+    .person .icon {
+    padding:0 0 0 35%;
+    }
+
+    .person .text-user p {
+        font-size:2em;
     }
 
     .icon .fa-lg {
-        font-size: 0.8em;
+        font-size: 1.8em;
+        padding:3px;
     }
+
+    .message {
+        display:none;
+    }
+
 }
