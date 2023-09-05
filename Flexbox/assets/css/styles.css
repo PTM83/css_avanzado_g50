@@ -1,0 +1,65 @@
+* {
+padding:0px;
+margin:0px;
+}
+
+.global_message {
+    display:flex;
+}
+
+.users {
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    border: solid 1px black;
+    background-color: aqua;
+    flex-grow:1;
+    flex-basis:1%;
+}
+
+.users p {
+    font-size:2em;
+}
+
+.person {
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    border: 1px solid black;
+}
+
+.person > .icon {
+    padding: 0 0 0 30%;
+}
+
+
+.message {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border: solid 1px black;
+    background-color: grey;
+    flex-grow:3;
+}
+
+.message > * {
+}
+
+/*SCREEN BEHAVIOUR*/
+@media screen and (max-width: 391px) {
+    .users{
+        flex-basis:30%;
+    }
+
+    .person > .icon {
+        padding-left:40%;
+    }
+
+    .users p {
+        font-size:1em;
+    }
+
+    .icon .fa-lg {
+        font-size: 0.8em;
+    }
+}
