@@ -12,7 +12,7 @@ margin:0px;
     flex-direction: column;
     min-height: 100vh;
     border: solid 1px black;
-    background-color: aqua;
+    background-color: white;
     flex-grow:1;
     flex-basis:20%;
 }
@@ -28,19 +28,34 @@ margin:0px;
 .text-user {
     display:flex;
     flex-direction:column;
+    flex-basis:50%;
 }
 
-.state {
-    font-size:1em;
-    color:grey;
+.person .text-user span {
+    font-size:0.8em;
+    text-align:left;
+    color: grey
 }
 
-.person .icon {
+ul.icon {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    list-style-type:none;
+    gap:10%;
+    padding:0 0.5em 0 0;
+}
+
+ul.icon .active {
+    display:none;
+}
+
+/*.person .icon {
     display:flex;
     flex-direction:row;
     gap:10px;
-    padding:0 0 0 20%;
-}
+    padding:0 5px 0 15px;
+}*/
 
 .users .person p {
     font-size:1.1em;
@@ -64,8 +79,9 @@ margin:0px;
     border: 1px solid black;
 }
 
+/*BUTTON*/
 button {
-    background-color:rgb(153, 153, 255);
+    background-color:rgb(164, 144, 210);
     border:1px solid rgb(51, 0, 153);
     color:white;
     cursor:pointer;
@@ -103,6 +119,10 @@ button {
     letter-spacing: 1px;
 }
 
+footer {
+    display:none;
+}
+
 /*SCREEN BEHAVIOUR*/
 @media screen and (max-width: 391px) {
     .users{
@@ -113,9 +133,9 @@ button {
     font-size:1.0em;
     }
 
-    .state {
-        font-size:0.8em;
-        color:grey;
+    .person .text-user span {
+    font-size:1em;
+    text-align:left;
     }
 
     .person img {
@@ -124,12 +144,24 @@ button {
         margin:10px 10px 10px 20px;
     }
 
-    .person .icon {
-    padding:0 0 0 35%;
+    ul.icon {
+        justify-content:flex-end;
+        padding: 0 0.4em 0 1.3em;
     }
 
+    ul.icon .active {
+        display:block;
+    }
+
+    div.add-person{
+        display:none;
+    }
+    /*.person .icon {
+    padding:0 20% 0 35%;
+    }*/
+
     .person .text-user p {
-        font-size:2em;
+        font-size:1.8em;
     }
 
     .icon .fa-lg {
@@ -139,6 +171,22 @@ button {
 
     .message {
         display:none;
+    }
+
+    footer {
+        display:block;
+        display:flex;
+        flex-direction: row;
+        border: solid 1px black;
+        background-color: rgb(164, 144, 210);
+        opacity:0.6;
+        flex-grow:1;
+        flex-basis:20%;
+        position: fixed;
+        bottom: 0;
+        z-index: 100;
+        width: 100%;
+        height: 60px;
     }
 
 }
