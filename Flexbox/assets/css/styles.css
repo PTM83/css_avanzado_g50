@@ -237,6 +237,19 @@ footer {
         width:100%;
     }
 
+    .footer-li {
+        display:flex;
+        flex-direction:column;
+        justify-content:space-around;
+        align-items:center;
+        height:50px;
+        padding-top:10px;
+    }
+
+    .footer-li span {
+        font-size:0.8em;
+    }
+
     i.fa-lg {
         font-size:150%;
     }
