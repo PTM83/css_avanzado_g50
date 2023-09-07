@@ -1,6 +1,7 @@
 * {
 padding:0px;
 margin:0px;
+font-family: sans-serif;
 }
 
 .global_message {
@@ -14,7 +15,42 @@ margin:0px;
     border: solid 1px black;
     background-color: white;
     flex-grow:1;
-    flex-basis:20%;
+    flex-basis:25%;
+}
+
+/*.users .person:hover {
+    cursor: pointer;
+}*/
+
+.profile {
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+.icon {
+    display:flex;
+    list-style-type:none;
+    gap:20%;
+    padding:0 1.5em 0 0;
+}
+
+/*.profile ul.icon {
+    display:flex;
+    justify-content:center;
+    list-style-type:none;
+    gap:15%;
+    padding:0 0.7em 0 0;
+}*/
+
+.profile .text-user {
+    display:block;
+    flex-direction:column;
+    flex-basis:50%;
+}
+
+.profile .icon .active {
+    display:none;
 }
 
 .person {
@@ -23,6 +59,11 @@ margin:0px;
     flex-direction:row;
     justify-content:flex-start;
     border: 1px solid black;
+}
+
+.person:hover {
+    background-color:rgb(164, 144, 210, 0.7);
+    cursor: pointer;
 }
 
 .text-user {
@@ -35,19 +76,6 @@ margin:0px;
     font-size:0.8em;
     text-align:left;
     color: grey
-}
-
-ul.icon {
-    display:flex;
-    flex-direction:row;
-    justify-content:space-around;
-    list-style-type:none;
-    gap:10%;
-    padding:0 0.5em 0 0;
-}
-
-ul.icon .active {
-    display:none;
 }
 
 /*.person .icon {
@@ -64,6 +92,12 @@ ul.icon .active {
 /*vertical-align: text-bottom;*/
 
 .person img {
+    border-radius: 50%;
+    width: 2.5em;
+    margin:10px 10px 10px 20px;
+}
+
+.profile img {
     border-radius: 50%;
     width: 2.5em;
     margin:10px 10px 10px 20px;
@@ -129,8 +163,17 @@ footer {
         flex-basis:100%;
     }
 
+    .profile .text-user p {
+        font-size:1.6em;
+        text-transform:uppercase;
+    }
+
+    .profile .icon {
+        padding:0px;
+    }
+
     .users .person p {
-    font-size:1.0em;
+        font-size:1.0em;
     }
 
     .person .text-user span {
@@ -149,7 +192,7 @@ footer {
         padding: 0 0.4em 0 1.3em;
     }
 
-    ul.icon .active {
+    .profile .icon .active {
         display:block;
     }
 
@@ -174,19 +217,28 @@ footer {
     }
 
     footer {
-        display:block;
         display:flex;
         flex-direction: row;
+        justify-content:space-between;
+        align-items:center;
         border: solid 1px black;
-        background-color: rgb(164, 144, 210);
-        opacity:0.6;
-        flex-grow:1;
-        flex-basis:20%;
+        background-color: rgb(164, 144, 210, 0.6);
+        height: 10%;
+        width:100%;
         position: fixed;
         bottom: 0;
-        z-index: 100;
-        width: 100%;
-        height: 60px;
+    }
+
+    ul {
+        display:flex;
+        justify-content:space-around;
+
+        list-style-type:none;
+        width:100%;
+    }
+
+    i.fa-lg {
+        font-size:150%;
     }
 
 }
