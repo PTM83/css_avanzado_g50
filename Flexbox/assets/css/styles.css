@@ -15,7 +15,7 @@ font-family: sans-serif;
     border: solid 1px black;
     background-color: white;
     flex-grow:1;
-    flex-basis:25%;
+    flex-basis:5%;
 }
 
 /*.users .person:hover {
@@ -31,8 +31,15 @@ font-family: sans-serif;
 .icon {
     display:flex;
     list-style-type:none;
-    gap:20%;
-    padding:0 1.5em 0 0;
+    gap:15%;
+    padding:0 0.7em 0 0;
+}
+
+.div-icon {
+    display:flex;
+    width:30%;
+    justify-content:flex-end;
+    padding:0 1em;
 }
 
 /*.profile ul.icon {
@@ -192,8 +199,9 @@ footer {
         padding: 0 0.4em 0 1.3em;
     }
 
-    .profile .icon .active {
+    .div-icon .icon .active {
         display:block;
+        text-decoration-line:none;
     }
 
     div.add-person{
