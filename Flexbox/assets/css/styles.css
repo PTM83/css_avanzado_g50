@@ -164,6 +164,10 @@ footer {
     display:none;
 }
 
+.fa-style {
+    color: #a490d2;
+}
+
 /*SCREEN BEHAVIOUR*/
 @media screen and (max-width: 391px) {
     .users{
