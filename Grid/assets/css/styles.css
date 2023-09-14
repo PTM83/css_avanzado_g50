@@ -12,7 +12,7 @@ body {
 
 .grid-container {
     display:grid;
-    grid-template-columns: 20% repeat(2, 40%);
+    grid-template-columns: auto repeat(2, 40%);
     grid-template-areas:
     "nav nav nav"
     "menu main main"
@@ -39,17 +39,19 @@ nav, menu, main {
     margin: .2rem;
 }
 
-menu h2 {
+menu, main {
     padding: 1.02rem;
+}
+
+menu h2 {
+    padding-bottom: .5rem;
+    font-weight:800;
 }
 
 menu ul {
     display:flex;
     flex-direction:column;
     padding-left:0.8rem;
-}
-
-menu ul li {
     list-style:none;
 }
 
