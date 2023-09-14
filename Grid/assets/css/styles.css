@@ -32,16 +32,30 @@ menu {
     grid-area:menu;
     min-height: 100vh;
     background: var(--prueba);
-    padding-left:50px;
+}
+
+nav, menu, main {
+    border: 1px solid black;
+    margin: .2rem;
+}
+
+menu h2 {
+    padding: 1.02rem;
 }
 
 menu ul {
     display:flex;
     flex-direction:column;
+    padding-left:0.8rem;
 }
 
 menu ul li {
     list-style:none;
+}
+
+.items {
+    display:flex;
+    gap:0.2rem;
 }
 
 main {
