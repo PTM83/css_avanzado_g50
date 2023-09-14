@@ -1,0 +1,15 @@
+* {
+    padding:0px;
+    margin:0px;
+}
+
+body {
+--principal: dodgerblue;
+}
+
+nav {
+    background: var(--principal);
+    text-align: center;
+    padding:1.1rem;
+    text-transform: uppercase;
+}
