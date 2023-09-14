@@ -5,6 +5,19 @@
 
 body {
 --principal: dodgerblue;
+--second: grey;
+--third: white;
+--prueba:pink;
+}
+
+.grid-container {
+    display:grid;
+    grid-template-columns: 20% repeat(2, 40%);
+    grid-template-areas:
+    "nav nav nav"
+    "menu main main"
+    "menu main main"
+    "footer footer footer"
 }
 
 nav {
@@ -12,4 +25,32 @@ nav {
     text-align: center;
     padding:1.1rem;
     text-transform: uppercase;
+    grid-area: nav;
+}
+
+menu {
+    grid-area:menu;
+    min-height: 100vh;
+    background: var(--prueba);
+    padding-left:50px;
+}
+
+menu ul {
+    display:flex;
+    flex-direction:column;
+}
+
+menu ul li {
+    list-style:none;
+}
+
+main {
+    grid-area:main;
+}
+
+footer {
+    grid-area:footer;
+    background: var(--third);
+    text-align: center;
+    padding:1.1rem;
 }
