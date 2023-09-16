@@ -8,18 +8,22 @@ body {
 --second: grey;
 --third: white;
 --prueba:pink;
+
+width:1500px;
+padding: 0 1.1rem;
+margin: 0 10%;
 }
 
 .grid-container {
     display:grid;
-    grid-template-columns: auto repeat(2, 40%);
+    grid-template-columns: auto repeat(4, 22%);
     grid-template-areas:
-    "nav nav nav"
-    "menu main main"
-    "menu main main"
-    "footer footer footer"
+    "nav nav nav nav nav"
+    "menu main main main main"
+    "menu main main main main"
+    "footer footer footer footer footer"
 }
-
+/*NAV*/
 nav {
     background: var(--principal);
     text-align: center;
@@ -28,15 +32,16 @@ nav {
     grid-area: nav;
 }
 
+nav, menu, main {
+    border: 1px solid black;
+    margin: .2rem;
+}
+
+/*MENU*/
 menu {
     grid-area:menu;
     min-height: 100vh;
     background: var(--prueba);
-}
-
-nav, menu, main {
-    border: 1px solid black;
-    margin: .2rem;
 }
 
 menu, main {
@@ -59,24 +64,29 @@ menu ul {
     display:flex;
     gap:0.2rem;
 }
-
+/*MAIN*/
 main {
     grid-area:main;
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
-
+/*MAIN - CARD*/
 .card {
     margin:0.25rem;
-
+    height: 500px;
     display:flex;
+    display-basis:3;
     flex-direction:column;
     justify-content:space-between;
+    align-items:center;
 }
 
 .card img {
     height: 80%;
-    border-radius: 8px;
+    width: 80%;
+    padding: 0 auto;
+    align-items:center;
+    border-radius: 18px;
 }
 
 .card strong {
@@ -98,14 +108,72 @@ strong, subs {
 
 button {
     height: 10%;
+    width:100%;
     background: var(--principal);
     font-weight: 700;
     font-size: 0.95rem;
+    border:0.1rem solid var(--principal);
+    border-radius:4px;
 }
 
+/*FOOTER*/
 footer {
     grid-area:footer;
     background: var(--third);
     text-align: center;
     padding:1.1rem;
+}
+
+@media (max-width:1030px) {
+    body {
+    width:auto;
+    margin:0;
+    padding:0;
+    }
+
+    .grid-container {
+        display:grid;
+        grid-template-columns: auto repeat(2, 40%);
+        grid-template-areas:
+        "nav nav nav"
+        "menu main main"
+        "menu main main"
+        "footer footer footer"
+    }
+
+    main {
+    grid-area:main;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:500px) {
+    body {
+    width:auto;
+    margin:0;
+    padding:0;
+    }
+
+    .grid-container {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "nav"
+        "menu"
+        "main"
+        "footer"
+    }
+
+    menu {
+    grid-area:menu;
+    min-height: 10vh;
+    background: var(--prueba);
+    }
+
+    main {
+    grid-area:main;
+    display:grid;
+    grid-template-columns: auto;
+    }
 }
