@@ -67,8 +67,40 @@ main {
 }
 
 .card {
-    border: 1px solid black;
     margin:0.25rem;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.card img {
+    height: 80%;
+    border-radius: 8px;
+}
+
+.card strong {
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.card subs {
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: rgb(128, 128, 128)
+}
+
+strong, subs {
+    text-align:center;
+    padding:0.3rem 0;
+}
+
+button {
+    height: 10%;
+    background: var(--principal);
+    font-weight: 700;
+    font-size: 0.95rem;
 }
 
 footer {
