@@ -5,13 +5,14 @@
 
 body {
 --principal: dodgerblue;
---second: grey;
+--second: rgb(236, 236, 236);
 --third: white;
 --prueba:pink;
 
 width:1500px;
 padding: 0 1.1rem;
 margin: 0 10%;
+font-family: Arial;
 }
 
 .grid-container {
@@ -41,11 +42,11 @@ nav, menu, main {
 menu {
     grid-area:menu;
     min-height: 100vh;
-    background: var(--prueba);
 }
 
 menu, main {
     padding: 1.02rem;
+    background: var(--second);
 }
 
 menu h2 {
@@ -63,6 +64,7 @@ menu ul {
 .items {
     display:flex;
     gap:0.2rem;
+    padding:0.3rem 0;
 }
 /*MAIN*/
 main {
@@ -112,8 +114,15 @@ button {
     background: var(--principal);
     font-weight: 700;
     font-size: 0.95rem;
+    font-family: Comic Sans MS;
     border:0.1rem solid var(--principal);
     border-radius:4px;
+}
+
+button:hover {
+    background: var(--second);
+    cursor: pointer;
+    border:0.1rem solid black;
 }
 
 /*FOOTER*/
@@ -124,7 +133,8 @@ footer {
     padding:1.1rem;
 }
 
-@media (max-width:1030px) {
+/*TABLET*/
+@media (max-width:1070px) {
     body {
     width:auto;
     margin:0;
@@ -148,6 +158,7 @@ footer {
     }
 }
 
+/*SMARTPHONES*/
 @media (max-width:500px) {
     body {
     width:auto;
@@ -167,13 +178,32 @@ footer {
 
     menu {
     grid-area:menu;
-    min-height: 10vh;
+    min-height: 0.2vh;
     background: var(--prueba);
+    padding:0;
+    }
+
+    menu > h2 {
+        padding:0 0.5rem;
+    }
+
+    menu ul {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    list-style:none;
+    padding:0 0.5rem;
     }
 
     main {
     grid-area:main;
     display:grid;
     grid-template-columns: auto;
+    }
+
+    .card img {
+    height: 90%;
+    width: 90%;
+    padding: 0 auto;
     }
 }
