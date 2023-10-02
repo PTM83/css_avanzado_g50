@@ -4,11 +4,11 @@
 }
 
 body {
-    --principal: dodgerblue;
-    --second: rgb(236, 236, 236);
+    --principal: rgb(0,87,156);
+    --second: rgb(194, 203, 203);
     --third: white;
-    --footer:pink;
-    --number: blue;
+    --footer:rgb(1,47,106);
+    --number: rgb(183,191,214);
 
     --height-head: 5rem;
 
@@ -47,6 +47,10 @@ menu {
     min-height: 100vh;
     background: var(--principal);
     text-align: center;
+}
+
+menu p {
+    color: var(--font-m-f);
 }
 
 menu .list {
@@ -89,6 +93,32 @@ main {
     align-items:center;
 }
 
+.card img {
+    height: 80%;
+    width: 80%;
+    padding: 0 auto;
+    align-items:center;
+    border-radius: 18px;
+}
+
+button {
+    height: 10%;
+    width:30%;
+    background: var(--principal);
+    font-weight: 700;
+    font-size: 0.95rem;
+    font-family: Comic Sans MS;
+    color: var(--font-m-f);
+    border:0.1rem solid var(--principal);
+    border-radius:4px;
+}
+
+button:hover {
+    background: var(--second);
+    cursor: pointer;
+    border:0.1rem solid black;
+}
+
 section {
     grid-area:num_list;
     background: var(--number);
@@ -98,9 +128,22 @@ footer {
     grid-area:footer;
     background: var(--footer);
     color: var(--font-m-f);
-    height:6rem;
+    height: 5rem;
+    padding: 1.1rem;
+    text-align:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 }
 
+footer div i {
+    padding:0 0.1rem;
+}
+
+footer h6 {
+    font-weight:700;
+}
 
 /*TABLET*/
 /*@media (max-width:1070px) {
