@@ -10,6 +10,10 @@ body {
     --footer:pink;
     --number: blue;
 
+    --height-head: 5rem;
+
+    --font-m-f: #f7f7f7;
+
     width:1500px;
     padding: 0 1.1rem;
     margin: 0 10%;
@@ -26,10 +30,16 @@ body {
     "footer num_list num_list num_list num_list"
 }
 
+.icon-styles {
+    color: var(--font-m-f);
+}
+
 nav {
     grid-area: nav;
     background: var(--second);
     text-align: center;
+
+    height: var(--height-head)
 }
 
 menu {
@@ -37,6 +47,28 @@ menu {
     min-height: 100vh;
     background: var(--principal);
     text-align: center;
+}
+
+menu .list {
+    display:flex;
+    flex-direction:column;
+}
+
+menu .list ul {
+    list-style: none;
+}
+
+menu .list ul li {
+    padding: 0.5rem 0;
+    color:var(--font-m-f);
+}
+
+.head {
+    height: var(--height-head);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:0.5rem;
 }
 
 main {
@@ -65,4 +97,83 @@ section {
 footer {
     grid-area:footer;
     background: var(--footer);
+    color: var(--font-m-f);
+    height:6rem;
 }
+
+
+/*TABLET*/
+/*@media (max-width:1070px) {
+    body {
+    width:auto;
+    margin:0;
+    padding:0;
+    }
+
+    .grid-container {
+        display:grid;
+        grid-template-columns: auto repeat(2, 40%);
+        grid-template-areas:
+        "menu menu menu"
+        "nav main main"
+        "nav main main"
+        "nav num_list num_list"
+        "footer footer footer"
+    }
+
+    menu {
+        grid-area:menu;
+        background: var(--principal);
+        text-align: center;
+        min-height: 0.2vh;
+    }
+
+    nav {
+        min-height: 100vh;
+    }
+
+    main {
+    grid-area:main;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*SMARTPHONES
+@media (max-width:576px) {
+    body {
+    width:auto;
+    margin:0;
+    padding:0;
+    }
+
+    .grid-container {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "menu"
+        "nav"
+        "main"
+        "num_list"
+        "footer"
+    }
+
+    menu {
+    grid-area:menu;
+    min-height: 0.2vh;
+    padding:0;
+    }
+
+    main {
+    grid-area:main;
+    display:grid;
+    grid-template-columns: auto;
+    }
+
+    .card img {
+    height: 90%;
+    width: 90%;
+    padding: 0 auto;
+    }
+}
+*/
