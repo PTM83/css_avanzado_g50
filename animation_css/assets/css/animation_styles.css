@@ -128,6 +128,7 @@ main {
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    overflow:hidden;
 
     box-shadow: 0.15rem 0.15rem 0.5rem 0.2rem var(--shadow);
     border-radius: 0.25rem;
@@ -139,6 +140,12 @@ main {
     padding: 0 auto;
     align-items:center;
     border-radius: 18px;
+    filter:grayscale(1);
+}
+
+.card img:hover {
+    filter:grayscale(0) brightness(150%) opacity(0.5);
+    transform:scale(1.5);
 }
 
 button {
@@ -335,6 +342,11 @@ footer p {
         border-radius: 18px;
     }
 
+    .card img:hover {
+        filter:grayscale(0) brightness(150%) opacity(0.5);
+        transform:scale(1.5);
+    }
+
     footer {
         grid-area:footer;
         background: var(--footer);
@@ -405,6 +417,11 @@ footer p {
 
     .card {
         display:none;
+    }
+
+    .card img:hover {
+        filter:grayscale(0) brightness(150%) opacity(0.5);
+        transform:scale(1.5);
     }
 
     .card1 {
