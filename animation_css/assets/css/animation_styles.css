@@ -4,10 +4,11 @@
 }
 
 body {
-    --principal: rgb(0,87,156);
-    --second: rgb(194, 203, 203);
+    --principal: rgb(9,21,43);
+    --second: rgb(197, 238, 242);
     --third: white;
-    --footer:rgb(1,47,106);
+    --button-color: rgb(48,119,149);
+    --footer:rgb(34,53,77);
     --number: rgb(183,191,214);
     --shadow: rgb(226, 226, 226);
 
@@ -68,6 +69,11 @@ menu {
     min-height: 100vh;
     background: var(--principal);
     text-align: center;
+}
+
+menu img {
+    width:100%;
+    height: var(--height-head);
 }
 
 active_icons {
@@ -138,7 +144,7 @@ main {
 button {
     height: 8%;
     width:30%;
-    background: var(--principal);
+    background: var(--button-color);
     font-weight: 700;
     font-size: 0.95rem;
     font-family: Comic Sans MS;
@@ -374,7 +380,7 @@ footer p {
         display:flex;
         align-items: center;
         display-direction: row;
-        justify-content: space-around;
+        justify-content: flex-start;
     }
 
     .icon_mobile {
@@ -382,7 +388,7 @@ footer p {
     }
 
     menu .icon_mobile {
-        padding-left: 55%;
+        padding-left: 80%;
     }
 
     menu .list ul { display: none; }
