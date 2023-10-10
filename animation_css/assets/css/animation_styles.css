@@ -141,14 +141,10 @@ main {
     align-items:center;
     border-radius: 18px;
     filter:grayscale(1);
+    z-index:1;
 }
 
-.card img:hover {
-    filter:grayscale(0) brightness(150%) opacity(0.5);
-    transform:scale(1.5);
-}
-
-button {
+.card button {
     height: 8%;
     width:30%;
     background: var(--button-color);
@@ -158,9 +154,16 @@ button {
     color: var(--font-m-f);
     border:0.1rem solid var(--principal);
     border-radius:4px;
+    position:relative;
+    z-index:2;
 }
 
-button:hover {
+.card img:hover {
+    filter:grayscale(0) brightness(150%) opacity(0.5);
+    transform:scale(1.5);
+}
+
+.card button:hover {
     background: var(--number);
     cursor: pointer;
     border:0.1rem solid black;
